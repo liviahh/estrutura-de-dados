@@ -1,20 +1,31 @@
 package ListasEncadeadas;
 
 public class Celula {
+
+    private int valor;
+    private Celula anterior;
     private Celula proxima;
-    private int elemento;
 
-    public Celula (){
-        
+    public Celula(int valor) {
+        this.valor = valor;
+        this.anterior = null;
+        this.proxima = null;
     }
 
-    public Celula(int elemento) {
-        this.elemento = elemento;
+    public int getValor() {
+        return valor;
     }
 
-    public Celula(Celula proxima, int elemento) {
-        this.proxima = proxima;
-        this.elemento = elemento;
+    public void setValor(int valor) {
+        this.valor = valor;
+    }
+
+    public Celula getAnterior() {
+        return anterior;
+    }
+
+    public void setAnterior(Celula anterior) {
+        this.anterior = anterior;
     }
 
     public Celula getProxima() {
@@ -24,13 +35,4 @@ public class Celula {
     public void setProxima(Celula proxima) {
         this.proxima = proxima;
     }
-
-    public int getElemento() {
-        return elemento;
-    }
-
-    public void setElemento(int elemento) {
-        this.elemento = elemento;
-    }
-    
 }
